@@ -1,7 +1,12 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { FileCode, Save, Share2 } from "lucide-react";
+import { FileCode, Moon, Save, Share2, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <main>
       <section className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
@@ -36,6 +41,20 @@ export default function Home() {
             >
               <FileCode className="h-4 w-4" />
               <span>Export</span>
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              aria-label="Toggle theme"
+              className="cursor-pointer"
+            >
+              {theme === "dark" ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </header>

@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useState, FC, ReactNode } from "react";
 import { BoxShadowState } from "@/types";
 

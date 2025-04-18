@@ -1,6 +1,7 @@
 import ControlsPanel from "@/components/main/ControlsPanel";
 import Header from "@/components/main/Header";
 import LayersPanel from "@/components/main/LayersPanel";
+import PreviewArea from "@/components/main/PreviewArea";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           </div>
           <div className="flex-1 overflow-auto">
             <div className="h-full flex items-center justify-center p-4">
-              Preview Zone
+              <PreviewArea />
             </div>
           </div>
           <div className="w-80 border-l border-gray-200 dark:border-gray-800 overflow-y-auto hidden md:block shrink-0">
